@@ -1,0 +1,112 @@
+{
+  "classes": [
+    {
+      "name": "11-A",
+      "room": "101",
+      "students": [
+        { "id": 1, "name": "Alice Johnson", "marks": 78, "attendance": true },
+        { "id": 2, "name": "Brian Smith", "marks": 85, "attendance": false },
+        { "id": 3, "name": "Catherine Lee", "marks": 92, "attendance": true },
+        { "id": 4, "name": "David Brown", "marks": 66, "attendance": true },
+        { "id": 5, "name": "Eva Davis", "marks": 74, "attendance": false },
+        { "id": 6, "name": "Frank Wilson", "marks": 88, "attendance": true },
+        { "id": 7, "name": "Grace Taylor", "marks": 59, "attendance": true },
+        { "id": 8, "name": "Henry Thomas", "marks": 91, "attendance": false },
+        { "id": 9, "name": "Isabella White", "marks": 83, "attendance": true },
+        { "id": 10, "name": "Jack Harris", "marks": 77, "attendance": true },
+        { "id": 11, "name": "Kara Martin", "marks": 95, "attendance": false },
+        { "id": 12, "name": "Liam Clark", "marks": 68, "attendance": true },
+        { "id": 13, "name": "Mia Lewis", "marks": 72, "attendance": true },
+        { "id": 14, "name": "Nathan Young", "marks": 87, "attendance": false },
+        { "id": 15, "name": "Olivia Hall", "marks": 81, "attendance": true },
+        { "id": 16, "name": "Paul Allen", "marks": 64, "attendance": true },
+        { "id": 17, "name": "Quinn Wright", "marks": 79, "attendance": true },
+        { "id": 18, "name": "Ruby King", "marks": 93, "attendance": false },
+        { "id": 19, "name": "Samuel Scott", "marks": 86, "attendance": true },
+        { "id": 20, "name": "Tina Green", "marks": 70, "attendance": true },
+        { "id": 21, "name": "Umar Baker", "marks": 58, "attendance": true },
+        { "id": 22, "name": "Violet Adams", "marks": 90, "attendance": true },
+        { "id": 23, "name": "William Nelson", "marks": 76, "attendance": false }
+      ]
+    },
+    {
+      "name": "11-B",
+      "room": "102",
+      "students": [
+        { "id": 24, "name": "Xenia Carter", "marks": 82, "attendance": true },
+        { "id": 25, "name": "Yara Mitchell", "marks": 61, "attendance": false },
+        { "id": 26, "name": "Zachary Perez", "marks": 84, "attendance": true },
+        { "id": 27, "name": "Ava Roberts", "marks": 67, "attendance": true },
+        { "id": 28, "name": "Benjamin Turner", "marks": 89, "attendance": false },
+        { "id": 29, "name": "Charlotte Phillips", "marks": 73, "attendance": true },
+        { "id": 30, "name": "Daniel Campbell", "marks": 96, "attendance": true },
+        { "id": 31, "name": "Ella Rogers", "marks": 71, "attendance": true },
+        { "id": 32, "name": "Finn Edwards", "marks": 87, "attendance": false },
+        { "id": 33, "name": "Gabriella Price", "marks": 75, "attendance": true },
+        { "id": 34, "name": "Harper Reed", "marks": 88, "attendance": true },
+        { "id": 35, "name": "Ian Morris", "marks": 69, "attendance": true },
+        { "id": 36, "name": "Jasmine Bell", "marks": 91, "attendance": false },
+        { "id": 37, "name": "Kyle Cox", "marks": 77, "attendance": true },
+        { "id": 38, "name": "Leah Gray", "marks": 85, "attendance": true },
+        { "id": 39, "name": "Mason Rivera", "marks": 60, "attendance": true },
+        { "id": 40, "name": "Nora Cooper", "marks": 92, "attendance": false },
+        { "id": 41, "name": "Owen Richardson", "marks": 79, "attendance": true },
+        { "id": 42, "name": "Peyton Cox", "marks": 68, "attendance": true },
+        { "id": 43, "name": "Quincy Howard", "marks": 81, "attendance": false },
+        { "id": 44, "name": "Rachel Ward", "marks": 74, "attendance": true }
+      ]
+    },
+    {
+      "name": "11-C",
+      "room": "103",
+      "students": [
+        { "id": 45, "name": "Sebastian Fisher", "marks": 93, "attendance": true },
+        { "id": 46, "name": "Tessa Stevens", "marks": 66, "attendance": true },
+        { "id": 47, "name": "Ulrich Wells", "marks": 84, "attendance": false },
+        { "id": 48, "name": "Valerie Jenkins", "marks": 78, "attendance": true },
+        { "id": 49, "name": "Wesley Simmons", "marks": 70, "attendance": true },
+        { "id": 50, "name": "Xander Perry", "marks": 88, "attendance": true },
+        { "id": 51, "name": "Yasmine Foster", "marks": 82, "attendance": false },
+        { "id": 52, "name": "Zane Hunter", "marks": 95, "attendance": true },
+        { "id": 53, "name": "Ariel Stone", "marks": 76, "attendance": true },
+        { "id": 54, "name": "Blake Austin", "marks": 67, "attendance": false },
+        { "id": 55, "name": "Clara Spencer", "marks": 91, "attendance": true },
+        { "id": 56, "name": "Dylan Knight", "marks": 73, "attendance": true },
+        { "id": 57, "name": "Elena Armstrong", "marks": 86, "attendance": true },
+        { "id": 58, "name": "Felix Berry", "marks": 65, "attendance": false },
+        { "id": 59, "name": "Georgia Marsh", "marks": 89, "attendance": true },
+        { "id": 60, "name": "Hudson Black", "marks": 77, "attendance": true },
+        { "id": 61, "name": "Ivy Reynolds", "marks": 94, "attendance": false },
+        { "id": 62, "name": "Jace Douglas", "marks": 83, "attendance": true },
+        { "id": 63, "name": "Kylie Freeman", "marks": 71, "attendance": true },
+        { "id": 64, "name": "Logan Townsend", "marks": 80, "attendance": true }
+      ]
+    },
+    {
+      "name": "11-D",
+      "room": "104",
+      "students": [
+        { "id": 65, "name": "Mila Pierce", "marks": 92, "attendance": true },
+        { "id": 66, "name": "Noah Matthews", "marks": 78, "attendance": false },
+        { "id": 67, "name": "Olive Sutton", "marks": 85, "attendance": true },
+        { "id": 68, "name": "Parker Barrett", "marks": 90, "attendance": true },
+        { "id": 69, "name": "Quinn Baldwin", "marks": 74, "attendance": false },
+        { "id": 70, "name": "Rowan Banks", "marks": 87, "attendance": true },
+        { "id": 71, "name": "Savannah Chambers", "marks": 69, "attendance": true },
+        { "id": 72, "name": "Theo Bryan", "marks": 81, "attendance": false },
+        { "id": 73, "name": "Uma Dawson", "marks": 76, "attendance": true },
+        { "id": 74, "name": "Victor Hopkins", "marks": 82, "attendance": true },
+        { "id": 75, "name": "Willow Fleming", "marks": 88, "attendance": true },
+        { "id": 76, "name": "Ximena Parks", "marks": 63, "attendance": false },
+        { "id": 77, "name": "Yusuf Brady", "marks": 91, "attendance": true },
+        { "id": 78, "name": "Zoey Drake", "marks": 79, "attendance": true },
+        { "id": 79, "name": "Aaron Jennings", "marks": 68, "attendance": false },
+        { "id": 80, "name": "Bella Foley", "marks": 86, "attendance": true },
+        { "id": 81, "name": "Caleb Skinner", "marks": 75, "attendance": true },
+        { "id": 82, "name": "Delilah Patrick", "marks": 94, "attendance": true },
+        { "id": 83, "name": "Easton Bartlett", "marks": 72, "attendance": false },
+        { "id": 84, "name": "Fiona Drake", "marks": 89, "attendance": true }
+      ]
+    }
+  ]
+}
