@@ -3,6 +3,8 @@
     {
       "name": "11-A",
       "room": "101",
+      "homeroom": "Mr. Smith",
+      "email" : "smith@gmail.com",
       "students": [
         { "id": 1, "name": "Alice Johnson", "marks": 78, "attendance": true },
         { "id": 2, "name": "Brian Smith", "marks": 85, "attendance": false },
@@ -32,6 +34,8 @@
     {
       "name": "11-B",
       "room": "102",
+      "homeroom": "Ms. Johnson",
+      "email" : "johnson@gmail.com",
       "students": [
         { "id": 24, "name": "Xenia Carter", "marks": 82, "attendance": true },
         { "id": 25, "name": "Yara Mitchell", "marks": 61, "attendance": false },
@@ -59,6 +63,8 @@
     {
       "name": "11-C",
       "room": "103",
+      "homeroom": "Mr. Brown",
+      "email" : "brown@gmail.com",
       "students": [
         { "id": 45, "name": "Sebastian Fisher", "marks": 93, "attendance": true },
         { "id": 46, "name": "Tessa Stevens", "marks": 66, "attendance": true },
@@ -85,6 +91,8 @@
     {
       "name": "11-D",
       "room": "104",
+      "homeroom": "Ms. Taylor",
+      "email" : "taylor@gmail.com",
       "students": [
         { "id": 65, "name": "Mila Pierce", "marks": 92, "attendance": true },
         { "id": 66, "name": "Noah Matthews", "marks": 78, "attendance": false },

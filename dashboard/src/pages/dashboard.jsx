@@ -9,12 +9,19 @@ import StudentCard from '../components/studentCard'
 import TeacherCard from '../components/teacherCard'
 import ClassRoomCard from '../components/classroomCard'
 import ClassAverageCard from '../components/classAverageCard'
+import { useSelector } from 'react-redux'
 
 
 const Dashboard = () => {
 
   const [marks, setMarks] = useState([])
   const [averageMarks, setAverageMarks] = useState(0)
+  const [room, setRoom] = useState('')
+  const [students, setStudents] = useState([])
+  const [attendance, setAttendance] = useState(0)
+  const [homeroom, setHomeroom] = useState(false)
+
+  const selectedClass = useSelector((state) => state.class.selectedClass);
 
   useEffect(() => {
     const fetchClassData = async () => {
@@ -26,30 +33,39 @@ const Dashboard = () => {
 
         
         const result = await response.json();
+        const classData = result.find((item) => item.name === selectedClass);
+        if (!classData) {
+          throw new Error('Class not found');
+        }
+        const { students, room, homeroom } = classData;
+        
+        setRoom(room)
+        setStudents(students)
+        setHomeroom(homeroom)
+        
 
         // Convert marks to numbers if they are strings
-        const numericMarks = result.map((item) => ({
-          ...item,
-          marks: Number(item.marks), // Ensure marks are numbers
-        }));
-        
-        const classes = result.map((res)=> res.name)
-        const rooms = result.map((res)=> res.room)
+        const numericMarks = students.map((s) => Number(s.marks));
+        const attendance = students.filter((student) => student.attendance === true).length;
+
+        setAttendance(attendance)
         setMarks(numericMarks);
-        console.log(classes)
+        
 
         // Calculate total and average marks
-        const totalMarks = numericMarks.reduce((acc, item) => acc + item.marks, 0);
-        const averageMarks = totalMarks / numericMarks.length;
-
+        const totalMarks = numericMarks.reduce((acc, mark) => acc + mark, 0);
+        const averageMarks = Math.round(totalMarks / numericMarks.length);
+        
         setAverageMarks(averageMarks); // Set the average marks
       } catch (err) {
         console.error(err);
       }
     };
-
-    fetchClassData();
-  },[])
+    if (selectedClass) {
+      fetchClassData();
+    }
+    
+  },[selectedClass])
 
 
   return (
@@ -60,7 +76,7 @@ const Dashboard = () => {
 
 
       <div className='w-full flex flex-col gap-6 '>
-        <p className="text-lg text-left">Grade 11-B (Home room class)</p>
+        <p className="text-lg text-left">Grade {selectedClass} (Home room class)</p>
 
         {/* OVERVIEW */}
         <div className="w-full h-fit flex flex-col justify-center gap-3 bg-bgsecondary text-left rounded-lg border border-border py-4 px-6">
@@ -68,18 +84,18 @@ const Dashboard = () => {
           <div className="grid grid-cols-3 gap-2 auto-rows-fr">
             {/* First column: ClassAverageCard spans all rows */}
             <ClassAverageCard
-              marks={marks}
+              data={students}
               classAverage={averageMarks}
               className="col-span-3 md:col-span-1 row-span-2"
             />
 
             {/* Second column: Two cards */}
-            <OverviewCard title="Students" data="37" />
-            <ClassRoomCard room="102" capacity={42} />
+            <OverviewCard title="Students" data={students.length} />
+            <ClassRoomCard room={room} capacity={42} />
 
             {/* Third column: Two cards */}
-            <OverviewCard title="Today's attendance" data="33" view={true}/>
-            <TeacherCard name="Mr. John Doe" subject="Physics" isHomeroom={true} />
+            <OverviewCard title="Today's attendance" data={attendance} view={true}/>
+            <TeacherCard name={homeroom} subject="Physics" isHomeroom={true} />
           </div>
         </div>
 

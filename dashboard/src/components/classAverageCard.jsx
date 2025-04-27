@@ -16,10 +16,9 @@ const chartConfig = {
   },
 }
 
-const ClassAverageCard = ({marks, classAverage}) => {
+const ClassAverageCard = ({data, classAverage}) => {
 
     
-
     // useEffect(() => {
     //     if (marks.length > 0){
     //     const totalMarks = marks.reduce((acc, mark) => acc + mark, 0);
@@ -48,7 +47,7 @@ const ClassAverageCard = ({marks, classAverage}) => {
             </div>
 
             <ChartContainer config={chartConfig} className="min-h-10 h-20 w-full">
-                <BarChart accessibilityLayer data={marks}>
+                <BarChart accessibilityLayer data={data}>
                     <Bar dataKey="marks" fill="var(--color-marks)" radius={4} barSize={4}/>
                     {/* <Bar dataKey="name" fill="var(--color-name)" radius={4} /> */}
                 </BarChart>
