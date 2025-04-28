@@ -6,9 +6,12 @@ import TeacherCard from './components/teacherCard.jsx'
 import StudentCard from './components/studentCard.jsx'
 import ClassDropDown from './components/classDropDown.jsx'
 import Dashboard from './pages/dashboard.jsx'
+import Layout from './pages/layout.jsx'
 function App() {
   return(
-    <Dashboard/>
+    <Layout>
+      <Dashboard/>
+    </Layout>
   )
   
 }

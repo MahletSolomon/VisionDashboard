@@ -15,11 +15,11 @@ const LanguageButton = () => {
       <DropdownMenuTrigger className="w-10 h-10 flex items-center justify-center rounded-full bg-bgsecondary border border-border focus:outline-none hover:scale-105 transition-transform duration-200 ease-in-out">
         <p className="text-md font-medium">{selectedLanguage.slice(0, 2)}</p>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="w-32 p-2 bg-white rounded-lg shadow-lg border border-border">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language}
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer hover:bg-bgsecondary active:bg-bgsecondary active:text-white"
             onClick={() => setSelectedLanguage(language)}
           >
             {language}

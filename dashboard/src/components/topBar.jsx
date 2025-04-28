@@ -3,6 +3,7 @@ import ClassDropDown from './classDropDown'
 import AcademicYear from './academicYear'
 import LanguageButton from './languageButton'
 import NotificationDropdown from './notificationDropdown'
+import DatePicker from './datePicker'
 
 const TopBar = () => {
   return (
@@ -10,6 +11,7 @@ const TopBar = () => {
           <ClassDropDown/>
           <div className="flex items-center gap-4">
             <AcademicYear/>
+            <DatePicker/>
             <LanguageButton/>
             <NotificationDropdown/>
           </div>

@@ -10,6 +10,7 @@ import TeacherCard from '../components/teacherCard'
 import ClassRoomCard from '../components/classroomCard'
 import ClassAverageCard from '../components/classAverageCard'
 import { useSelector } from 'react-redux'
+import ClassDetailTabs from '../components/classDetailTabs'
 
 
 const Dashboard = () => {
@@ -70,9 +71,9 @@ const Dashboard = () => {
 
   return (
     <div className='w-full h-screen flex flex-col gap-4'> 
-      {/* <div className="w-full absolute top-0 left-0 h-full z-0"> */}
-        <TopBar/>
-      {/* </div> */}
+      <div className="sticky top-0 z-10 bg-white">
+        <TopBar />
+      </div>
 
 
       <div className='w-full flex flex-col gap-6 '>
@@ -100,7 +101,7 @@ const Dashboard = () => {
         </div>
 
         <div className="w-full h-fit flex flex-col justify-center gap-3 bg-bgsecondary text-left rounded-lg border border-border py-4 px-6">
-
+          <ClassDetailTabs students={students}/>
         </div>
 
 
