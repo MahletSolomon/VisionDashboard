@@ -2,6 +2,7 @@ import {
   flexRender,
   getCoreRowModel,
   useReactTable,
+  ColumnDef,
 } from "@tanstack/react-table";
 
 import {
@@ -13,7 +14,13 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export function StudentDataTable({ columns, data = [] }) {
+// Define the props for the component
+interface StudentDataTableProps<T> {
+  columns: ColumnDef<T>[]; // Array of column definitions
+  data: T[]; // Array of data objects
+}
+
+export function StudentDataTable<T>({ columns, data }: StudentDataTableProps<T>): JSX.Element {
   const table = useReactTable({
     data,
     columns,

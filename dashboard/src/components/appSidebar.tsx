@@ -2,7 +2,14 @@ import { Sidebar, SidebarContent, SidebarTrigger } from "@/components/ui/sidebar
 import star from "@/assets/star.svg";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
-const items = [
+
+interface SidebarItem {
+  title: string;
+  url: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+const items : SidebarItem[] = [
   { title: "Home", url: "#", icon: Home },
   { title: "Inbox", url: "#", icon: Inbox },
   { title: "Calendar", url: "#", icon: Calendar },
@@ -10,7 +17,7 @@ const items = [
   { title: "Settings", url: "#", icon: Settings },
 ];
 
-export function AppSidebar() {
+export function AppSidebar() : JSX.Element {
   return (
     <Sidebar className=" w-64 h-screen bg-bgsecondary border-r border-border flex flex-col justify-between">
       {/* Sidebar Trigger */}

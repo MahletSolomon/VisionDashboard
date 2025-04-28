@@ -1,14 +1,25 @@
-import React from 'react';
+import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import StudentPage from '../pages/studentPage';
+import StudentPage from "../pages/studentPage";
 
-const ClassDetailTabs = ({students}) => {
-  const navItems = [
-    { label: 'Students', value: 'students' },
-    { label: 'Attendance', value: 'attendance' },
-    { label: 'Mark List', value: 'mark-list' },
-    { label: 'Master Sheet', value: 'master-sheet' },
-    { label: 'Time Table', value: 'time-table' },
+// Define the type for the `navItems` array
+interface NavItem {
+  label: string;
+  value: string;
+}
+
+// Define the props for the component
+interface ClassDetailTabsProps {
+  students: Array<{ name: string; marks: number | string; attendance: boolean }>;
+}
+
+const ClassDetailTabs: React.FC<ClassDetailTabsProps> = ({ students }) => {
+  const navItems: NavItem[] = [
+    { label: "Students", value: "students" },
+    { label: "Attendance", value: "attendance" },
+    { label: "Mark List", value: "mark-list" },
+    { label: "Master Sheet", value: "master-sheet" },
+    { label: "Time Table", value: "time-table" },
   ];
 
   return (
@@ -25,9 +36,7 @@ const ClassDetailTabs = ({students}) => {
         ))}
       </TabsList>
       <TabsContent value="students">
-        
-        <StudentPage students={students}/>
-
+        <StudentPage students={students} />
       </TabsContent>
       <TabsContent value="attendance">Attendance details go here.</TabsContent>
       <TabsContent value="mark-list">Mark list details go here.</TabsContent>

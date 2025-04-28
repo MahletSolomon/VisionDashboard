@@ -2,19 +2,21 @@ import React, { useState } from 'react'
 import { ChevronUp, ChevronDown } from 'lucide-react'; // Assuming you're using Lucide icons
 
 
-const AcademicYear = () => {
+const AcademicYear : React.FC = () => {
     const currentYear = new Date().getFullYear()
-    const [selectedYear, setSelectedYear] = useState(currentYear)
+    const [selectedYear, setSelectedYear] = useState<number>(currentYear)
 
-    const nextYear = () => {
+    const nextYear = () : void => {
         if (selectedYear < currentYear) {
             setSelectedYear(selectedYear + 1)
         }
-        // setSelectedYear(selectedYear + 1)
+
     }
-    const previousYear = () => {
+
+    const previousYear = () : void => {
         setSelectedYear(selectedYear - 1)
     }
+
   return (
      <div className="flex items-center gap-2 py-2 px-4 border border-border rounded-full bg-bgsecondary">
       <p className=" text-muted">Academic year:</p>

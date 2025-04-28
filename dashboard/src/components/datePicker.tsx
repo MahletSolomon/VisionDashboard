@@ -1,19 +1,21 @@
-import * as React from "react"
-import { Calendar as CalendarIcon } from "lucide-react"
- 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
+import * as React from "react";
+import { Calendar as CalendarIcon } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
 
-const DatePicker = () => {
-  
-  const [date, setDate] = React.useState()
- 
+// Define the type for the selected date
+type DateType = Date | undefined;
+
+const DatePicker: React.FC = () => {
+  const [date, setDate] = React.useState<DateType>(undefined);
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -24,7 +26,7 @@ const DatePicker = () => {
             // !date && "text-muted-foreground"
           )}
         >
-          <CalendarIcon className=" h-4 w-4" />
+          <CalendarIcon className="h-4 w-4" />
           {/* {date ? format(date, "PPP") : <span>Pick a date</span>} */}
         </Button>
       </PopoverTrigger>
@@ -37,7 +39,7 @@ const DatePicker = () => {
         />
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};
 
-export default DatePicker
+export default DatePicker;

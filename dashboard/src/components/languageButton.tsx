@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu'; // Adjust the import path based on your project structure
+} from "./ui/dropdown-menu"; // Adjust the import path based on your project structure
 
-const LanguageButton = () => {
-  const languages = ['English', 'France', 'Amharic'];
-  const [selectedLanguage, setSelectedLanguage] = React.useState(languages[0]);
+// Define the type for the languages array
+type Language = string;
+
+const LanguageButton: React.FC = () => {
+  const languages: Language[] = ["English", "France", "Amharic"];
+  const [selectedLanguage, setSelectedLanguage] = React.useState<Language>(languages[0]);
 
   return (
     <DropdownMenu className="w-fit h-full flex gap-2 items-center justify-center">

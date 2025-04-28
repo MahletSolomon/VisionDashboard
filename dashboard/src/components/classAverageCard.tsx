@@ -1,34 +1,30 @@
-import React, { useEffect, useState } from 'react'
 import right from '../assets/rightArrow.svg'
-
+import { ChevronRight } from 'lucide-react'; 
 import { Bar, BarChart } from "recharts"
- 
 import { ChartContainer } from "@/components/ui/chart"
 
-const chartConfig = {
-  name: {
-    label: "name",
-    color: "#2563eb",
-  },
+
+interface ChartConfig {
+  marks: {
+    label: string;
+    color: string;
+  };
+}
+
+interface ClassAverageCardProps {
+  data: Array<{marks: number }>;
+  classAverage: number;
+}
+
+const chartConfig : ChartConfig= {
+
   marks: {
     label: "marks",
     color: "#E16448",
   },
 }
 
-const ClassAverageCard = ({data, classAverage}) => {
-
-    
-    // useEffect(() => {
-    //     if (marks.length > 0){
-    //     const totalMarks = marks.reduce((acc, mark) => acc + mark, 0);
-    //     const averageMarks = totalMarks / marks.length;
-    //     const percentage = (averageMarks / 100) * 100; 
-    //     setAverageMarks(percentage)
-    // }
-        // console.log(marks)
-
-    // }, [marks]);    
+const ClassAverageCard : React.FC<ClassAverageCardProps> = ({data, classAverage}) => {  
   
   return (
     <div className='h-full row-span-2 px-4 py-3 border-[0.5px] border-border bg-white rounded-lg '>
@@ -37,7 +33,7 @@ const ClassAverageCard = ({data, classAverage}) => {
                 <p className='text-text text-sm font-medium'>Class Average</p> 
                 <div className='flex items-end space-x-2 hover:cursor-pointer hover:scale-105 rounded-lg group'>
                     <p className='text-text text-sm font-medium group-hover:underline group-hover:decoration-[0.7px] group-hover:underline-offset-4  '>View</p>
-                    <img src={right} alt="right" className='w-4 h-4'/>
+                    <ChevronRight className='text-text group-hover:text-primary transition-all duration-200 ease-in-out' size={16} />
                 </div>
             </div>
 
